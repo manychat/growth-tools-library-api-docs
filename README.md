@@ -18,12 +18,26 @@ Loading of the library is done by using a script. The link to this script can be
 </script>
 ```
 
+## Embed Widgets Initialization
+
+To initialize an embed widget (button or box), you need to add an additional code into your page where you want the widget to appear.
+In general, this code looks like this:
+
+```html
+<div class="mcwidget-embed" data-widget-id="YOUR_WIDGET_ID" data-widget-payload="OPTIONAL_PAYLOAD"></div>
+```
+You can place the code in several places on the same page. An instance of the widget will be initialized at each place. 
+For each instance of the widget, you can set an optional payload - this is the data that will be saved in the Custom User Field specified in the settings of the widget.
+To set the payload for the widget instance, set `data-widget-payload` attribute for an element or use the` setPayload` method described below.
+ 
+
 ## Core Methods
 
 | Method  | Description |
 | ------------- | ------------- |
 | `MC.parse()`  | Finds widget elements on a page (e.g. `<div class="mcwidget-checkbox" data-widget-id="420"></div>`) and renders them. This functions is called on the library’s loading. It can be useful if you need to render an element that was added to the DOM after the library has loaded.   |
-| `MC.getWidget(widgetId)`  | Returns the widget’s object by ID. With this object you can listen to the widget’s events and call methods. Widget’s ID can be obtained from the snippet in Growth Tools.   |
+| `MC.getWidget(widgetId or DOM Element)`  | Returns the widget’s object by widget ID or by DOM Element of Embed widget instance. With this object you can listen to the widget’s events and call methods. Widget’s ID can be obtained from the snippet in Growth Tools.   |
+| `MC.getWidgetList()`  | Returns a list of all active widgets.   |
 
 ## Checkbox Widget Methods
 _All methods and properties listed below are available only for “Checkbox” widget type._
@@ -44,3 +58,34 @@ _All methods and properties listed below are available only for “Bar”, "Slid
 | ------------- | ------------- |
 | `.open()`  | Open widget.  |
 | `.close()`  | Close widget.  |
+| `.setPayload(refPayload)`  | Sets the ref payload for the widget. Value must be a string. Max 200 characters. Valid characters are `a-z A-Z 0-9 +/=-._`  |
+
+## Customer Chat Widget Methods
+_All methods and properties listed below are available only for “Customer Chat” widget type._
+
+| Method  | Description |
+| ------------- | ------------- |
+| `.setPayload(refPayload)`  | Sets the ref payload for the widget. Value must be a string  |
+
+
+## Embed Widget Methods
+_All methods and properties listed below are available only for “Button” and "Box" widget types._
+
+To execute methods on a widget, you need to get a widget instance object.
+You can’t get it by passing the `widgetId` to the method `MC.getWidget` because there can be several instances of the widget on the page at the same time.
+Therefore, to get an instance object, you should pass the Widget DOM Element as parameter when calling `MC.getWidget`, for example
+
+```html
+<!-- your code snippet -->
+<div id="test-widget" class="mcwidget-embed" data-widget-id="420"></div>
+```
+
+```javascript
+const widgetInstanceElement = document.getElementById('test-widget')
+const widget = MC.getWidget(widgetInstanceElement)
+widget.setPayload('custom_payload')
+```
+
+| Method  | Description |
+| ------------- | ------------- |
+| `.setPayload(refPayload)`  | Sets the ref payload for the widget. Value must be a string. Max 200 characters. Valid characters are `a-z A-Z 0-9 +/=-._`  |
