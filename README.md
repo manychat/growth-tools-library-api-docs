@@ -58,7 +58,7 @@ _All methods and properties listed below are available only for “Bar”, "Slid
 | ------------- | ------------- |
 | `.open()`  | Open widget.  |
 | `.close()`  | Close widget.  |
-| `.setPayload(refPayload)`  | Sets the ref payload for the widget. Value must be a string. Max 200 characters. Valid characters are `a-z A-Z 0-9 +/=-._`  |
+| `.setPayload(refPayload)`  | Set the ref payload for the widget. Value must be a string. Max 200 characters. Valid characters are `a-z A-Z 0-9 +/=-._`  |
 
 ## Customer Chat Widget Methods
 _All methods and properties listed below are available only for “Customer Chat” widget type._
@@ -72,10 +72,10 @@ Each Customer Chat method is limited to 1 call per 5 seconds.
 | `.close()`  | Close entire widget.  |
 | `.openDialog()`  | Open widget dialog.  |
 | `.closeDialog()`  | Close widget dialog.  |
-| `.setLoggedInGreeting(text)`  | Sets the greeting text for logged in user.  |
-| `.setLoggedOutGreeting(text)`  | Sets the greeting text for logged out user.  |
-| `.setPayload(refPayload)`  | Sets the ref payload for the widget. Value must be a string  |
-| `.set(changes)` | Sets the greeting text and/or the ref payload params. `changes` is a JSON object with the new values. Available param names: `loggedInGreeting`, `loggedOutGreeting`, `refPayload` |
+| `.setLoggedInGreeting(text)`  | Set the greeting text for logged in user.  |
+| `.setLoggedOutGreeting(text)`  | Set the greeting text for logged out user.  |
+| `.setPayload(refPayload)`  | Set the ref payload for the widget. Value must be a string  |
+| `.set(changes)` | Set the greeting text and/or the ref payload params. `changes` is a JSON object with the new values. Available param names: `loggedInGreeting`, `loggedOutGreeting`, `refPayload` |
 
 
 ## Embed Widget Methods
@@ -98,7 +98,7 @@ widget.setPayload('custom_payload')
 
 | Method  | Description |
 | ------------- | ------------- |
-| `.setPayload(refPayload)`  | Sets the ref payload for the widget. Value must be a string. Max 200 characters. Valid characters are `a-z A-Z 0-9 +/=-._`  |
+| `.setPayload(refPayload)`  | Set the ref payload for the widget. Value must be a string. Max 200 characters. Valid characters are `a-z A-Z 0-9 +/=-._`  |
 
 
 ## Links
