@@ -99,3 +99,8 @@ widget.setPayload('custom_payload')
 | Method  | Description |
 | ------------- | ------------- |
 | `.setPayload(refPayload)`  | Sets the ref payload for the widget. Value must be a string. Max 200 characters. Valid characters are `a-z A-Z 0-9 +/=-._`  |
+
+
+## Links
+- [Example of using Checkbox widget](https://github.com/manychat/checkbox-growth-tools-example)
+- [Example of using Customer Chat widget](https://github.com/manychat/customer-chat-growth-tools-example)
