@@ -104,3 +104,4 @@ widget.setPayload('custom_payload')
 ## Links
 - [Example of using Checkbox widget](https://github.com/manychat/checkbox-growth-tools-example)
 - [Example of using Customer Chat widget](https://github.com/manychat/customer-chat-growth-tools-example)
+- [Example of using Overlay widgets](https://github.com/manychat/overlay-growth-tools-example)
