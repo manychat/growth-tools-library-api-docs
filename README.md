@@ -1,8 +1,9 @@
-# ManyChat growth tools library API docs
+# ManyChat growth tools SDK docs
 
 This library provides additional opportunities when using ManyChat Growth Tools:
 - Functionality for using headless checkbox widget
 - Opportunity to initialize widgets for dynamically created elements
+- Control widgets visibility and more
 
 ## Initialization
 
