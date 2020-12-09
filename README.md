@@ -75,7 +75,6 @@ Each Customer Chat method is limited to 1 call per 5 seconds.
 | `.closeDialog()`  | Close widget dialog.  |
 | `.setLoggedInGreeting(text)`  | Set the greeting text for logged in user.  |
 | `.setLoggedOutGreeting(text)`  | Set the greeting text for logged out user.  |
-| `.setPayload(refPayload)`  | Set the ref payload for the widget. Value must be a string  |
 | `.set(changes)` | Set the greeting text and/or the ref payload params. `changes` is a JSON object with the new values. Available param names: `loggedInGreeting`, `loggedOutGreeting`, `refPayload` |
 
 
